@@ -10,7 +10,13 @@ function App() {
       <ChartComponent 
       primaryXAxis={{valueType:"DateTime", title: 'Month', skeleton: 'yMMM',
       edgeLabelPlacement:"Shift", enableAutoIntervalOnZooming:true}} primaryYAxis={{title:"Price"}}
-      zoomSettings={{enableSelectionZooming:true, enablePan:true, enableScrollbar:true, mode:"X"}}>
+      zoomSettings={{         enableSelectionZooming: true,
+          enablePan: true,
+          enablePinchZooming: true,
+          enableMouseWheelZooming: true,
+          enableDeferredZooming: true,
+          enableScrollbar: true,
+          mode: "X"}}>
         <Inject services={[HiloOpenCloseSeries, DateTime, Zoom, ScrollBar]}></Inject>
         <SeriesCollectionDirective>
           <SeriesDirective type="HiloOpenClose" dataSource={chartData}
