@@ -10,7 +10,8 @@ function App() {
       <ChartComponent 
       primaryXAxis={{valueType:"DateTime", title: 'Month', skeleton: 'yMMM',
       edgeLabelPlacement:"Shift", enableAutoIntervalOnZooming:true}} primaryYAxis={{title:"Price"}}
-      zoomSettings={{         enableSelectionZooming: true,
+      zoomSettings={{
+          enableSelectionZooming: true,
           enablePan: true,
           enablePinchZooming: true,
           enableMouseWheelZooming: true,
